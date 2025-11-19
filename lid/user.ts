@@ -6,7 +6,8 @@ export type User = {
   objective: string;
   location?: string;
   email?: string;
-  phone?:string
+  phone?:string;
+  whatsappNumber?: string;
   social?: {
     github?: string;
     linkedin?: string;
