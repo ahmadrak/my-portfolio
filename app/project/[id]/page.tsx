@@ -7,16 +7,15 @@ export default async function Page({
   params: Promise<{ id: string }>
 })
 {
-  const { id } = await params
+  const { id } = await params;
 
   const projectId = Number(id);
   const project: Project | undefined = projects.find((p) => p.id === projectId);
-  
-  
+
   if (!project) {
-  return <div>Project not found</div>;
-}
-   
+    return <div>Project not found</div>;
+  }
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
@@ -46,6 +45,7 @@ export default async function Page({
             Live Demo
           </a>
         )}
+
         {project.githubUrl && (
           <a
             href={project.githubUrl}
@@ -56,9 +56,26 @@ export default async function Page({
           </a>
         )}
       </div>
-       
-          <GoBackButton />
-       
+
+      {/* 🔥 Added: Multiple Images Display */}
+      {project.image && project.image.length > 0 && (
+        <div className="mt-8 space-y-4">
+          <h2 className="font-semibold text-xl">Project Screenshots:</h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {project.image.map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                alt={`${project.title} screenshot ${i + 1}`}
+                className="rounded-lg shadow-lg border"
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      <GoBackButton />
     </div>
   );
 }

@@ -5,44 +5,55 @@ export type Project = {
   title: string;
   description: string;
   tech: string[];
-  image?: string;
+  image?: string[];
   liveUrl?: string;
   githubUrl?: string;
 };
-
 export const projects: Project[] = [
   {
     id: 1,
     title: "Task Manager App",
-    description:
-      "A full-stack web app that allows users to create, update, and manage tasks with authentication and role-based access control using Passport.js and PostgreSQL.",
-    tech: ["React", "Express", "Node.js", "PostgreSQL", "Passport.js"],
-    liveUrl: "https://yourtaskmanager.vercel.app",
-    githubUrl: "https://github.com/ahmadali/task-manager",
+    description: "A full-stack web app...",
+    tech: ["Nextjs", "TailwindCSS", "Node.js", "PostgreSQL"],
+    image: [
+      "/images/task1.png",
+      "/images/task2.png",
+      "/images/task3.png"
+    ],
+    liveUrl: "https://task-manager-a7q9.vercel.app/",
+    githubUrl: "https://github.com/ahmadrak/task_manager",
   },
   {
     id: 2,
     title: "Online Store Frontend",
-    description:
-      "An e-commerce interface built with React and Redux, featuring product listing, shopping bag functionality, and responsive design.",
+    description: "An e-commerce interface...",
     tech: ["React", "Redux", "Tailwind CSS"],
-    liveUrl: "https://yourstore.vercel.app",
-    githubUrl: "https://github.com/ahmadali/online-store",
+    image: [
+      "/images/store1.png",
+      "/images/store2.png",
+      "/images/store3.png"
+    ],
+    liveUrl: "https://mystore325.netlify.app",
+    githubUrl: "https://github.com/ahmadrak/store",
   },
   {
     id: 3,
-    title: "To-Do List App (Vanilla JS)",
-    description:
-      "A simple to-do list built with pure JavaScript classes and DOM manipulation for practicing clean code and component-based logic without frameworks.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://yourtodo.vercel.app",
-    githubUrl: "https://github.com/ahmadali/todo-vanilla-js",
+    title: "reddit clone App",
+    description: "Simple reddit clone...",
+    tech: ["Tailwind", "ReactJS", "expressJS"],
+    image: [
+      "/images/reddit1.png",
+      "/images/reddit2.png",
+      "/images/reddit3.png"
+    ],
+    githubUrl: "https://github.com/ahmadrak/reddit_clone",
   },
   {
-    id: 4,
-    title: "Social Media Platform (In Progress)",
-    description:
-      "A full-stack social app with posts, comments, and authentication, built with Express.js, Passport.js, PostgreSQL, and React.",
-    tech: ["React", "Express", "Node.js", "PostgreSQL"],
-  },
+    id: 4, 
+    title: "Dream Escape (In Progress)",
+    description: "A full-stack where the user book flights and the admin can add packages and control users, built with Nextjs, PostgreSQL, and TaikwindCSS.", tech: ["NextJS", "Tailwind", "PostgreSQL"], 
+    liveUrl:"", 
+    githubUrl:'https://github.com/ahmadrak/dream-escape'
+  }
+  
 ];

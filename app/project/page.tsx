@@ -14,11 +14,12 @@ const ProjectsPage = () => {
           >
             {/* Project Image */}
             <div className="w-full h-48 overflow-hidden rounded-xl">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              />
+              { project.image &&  <img
+                     src={project.image?.[0] || "/default.jpg"}
+                     alt={project.title}
+                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />}
+             
             </div>
 
             {/* Project Info */}
