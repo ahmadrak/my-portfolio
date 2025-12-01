@@ -22,8 +22,10 @@ export default function RootLayout({
         <nav className="flex justify-center gap-6 p-4 bg-gray-900 text-white">
           <Link href="/">Home</Link>
           <Link href="/project">Projects</Link>
+          <Link href="/experience">Experience</Link>
           <Link href="/skills">Skills</Link>
           <Link href="/contact">Contact</Link>
+          <a href="/Ahmed_Ali_CV.pdf" download>Download CV</a>
         </nav>
         <main className="p-8">{children}</main>
       </body>
