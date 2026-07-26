@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import ChatWidget from "./Component/ChatWidget";
 
 export const metadata: Metadata = {
   title: "Ahmed Ali | Portfolio",
@@ -27,6 +28,7 @@ export default function RootLayout({
           <Link href="/contact">Contact</Link>
           <a href="/Ahmed_Ali_CV.pdf" download>Download CV</a>
         </nav>
+        <ChatWidget />
         <main className="p-8">{children}</main>
       </body>
     </html>
