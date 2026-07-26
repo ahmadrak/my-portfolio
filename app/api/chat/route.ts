@@ -6,6 +6,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const SYSTEM_PROMPT = `
 انت مساعد ذكي على portfolio أحمد، مطور Full-Stack.
 جاوب زوار الموقع عن أحمد بأسلوب ودود ومختصر.
+    ملاحطه رد بنفس الغه الي يوصلك
 
 معلومات عن أحمد:
 الخبره : [
@@ -128,7 +129,6 @@ const SYSTEM_PROMPT = `
     github: "https://github.com/ahmadrak",
     linkedin: "https://linkedin.com/in/ahmad-ali-578070aa",
   }
-    ملاحطه رد بنفس الغه الي يوصلك
 
 `;
 
