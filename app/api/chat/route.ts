@@ -128,7 +128,7 @@ const SYSTEM_PROMPT = `
     github: "https://github.com/ahmadrak",
     linkedin: "https://linkedin.com/in/ahmad-ali-578070aa",
   }
-    
+    ملاحطه رد بنفس الغه الي يوصلك
 
 `;
 
