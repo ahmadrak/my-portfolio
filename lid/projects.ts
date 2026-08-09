@@ -1,7 +1,5 @@
 // lid/projects.ts
 
-// lid/projects.ts
-
 export type Project = {
   id: number;
   title: string;
