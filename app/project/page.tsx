@@ -26,9 +26,7 @@ const ProjectsPage = () => {
             <div className="mt-4 flex flex-col flex-grow">
               <Link href={`/project/${project.id}`}>
               <h3 className="text-xl font-semibold">{project.title}</h3>
-              <p className="text-gray-600 text-sm mt-2 flex-grow">
-                {project.description}
-              </p>
+  
               </Link>
               {/* Technologies */}
               <div className="mt-4 flex flex-wrap gap-2">
