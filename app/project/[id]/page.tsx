@@ -1,5 +1,6 @@
 import { projects, Project } from "@/lid/projects";
 import GoBackButton from '../../Component/GoBackButton'
+import ImageCarousel from '../../Component/ImageCarousel'
 
 export default async function Page({
   params,
@@ -57,22 +58,8 @@ export default async function Page({
         )}
       </div>
 
-      {/* 🔥 Added: Multiple Images Display */}
       {project.image && project.image.length > 0 && (
-        <div className="mt-8 space-y-4">
-          <h2 className="font-semibold text-xl">Project Screenshots:</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {project.image.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`${project.title} screenshot ${i + 1}`}
-                className="rounded-lg shadow-lg border"
-              />
-            ))}
-          </div>
-        </div>
+        <ImageCarousel images={project.image} alt={project.title} />
       )}
 
       <GoBackButton />
