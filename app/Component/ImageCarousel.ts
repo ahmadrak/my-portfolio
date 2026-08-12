@@ -2,41 +2,54 @@
 
 import { useState } from "react";
 
+interface ImageCarouselProps {
+  images: string[];
+  alt: string;
+}
+
 export default function ImageCarousel({
   images,
   alt,
-}: {
-  images: string[];
-  alt: string;
-}) {
+}: ImageCarouselProps) {
   const [current, setCurrent] = useState(0);
 
-  if (!images || images.length === 0) return null;
+  if (!images || images.length === 0) {
+    return null;
+  }
 
-  const goPrev = () =>
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const goPrev = () => {
+    setCurrent((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
+  };
 
-  const goNext = () =>
-    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  const goNext = () => {
+    setCurrent((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
+    );
+  };
 
   return (
     <div className="mt-8">
-      <h2 className="font-semibold text-xl mb-4">Project Screenshots:</h2>
+      <h2 className="mb-4 text-xl font-semibold">
+        Project Screenshots:
+      </h2>
 
-      <div className="relative rounded-lg overflow-hidden border shadow-lg bg-gray-100">
+      <div className="relative overflow-hidden rounded-lg border bg-gray-100 shadow-lg">
         <img
           src={images[current]}
           alt={`${alt} screenshot ${current + 1}`}
-          className="w-full h-auto max-h-[520px] object-contain bg-gray-100"
+          className="h-auto max-h-[520px] w-full object-contain bg-gray-100"
         />
 
         {images.length > 1 && (
           <>
-            {/* Prev arrow */}
+            {/* Previous arrow */}
             <button
+              type="button"
               onClick={goPrev}
               aria-label="Previous screenshot"
-              className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 text-white hover:bg-black/70 transition"
+              className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white transition hover:bg-black/70"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +57,7 @@ export default function ImageCarousel({
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
-                className="w-5 h-5"
+                className="h-5 w-5"
               >
                 <path
                   strokeLinecap="round"
@@ -56,9 +69,10 @@ export default function ImageCarousel({
 
             {/* Next arrow */}
             <button
+              type="button"
               onClick={goNext}
               aria-label="Next screenshot"
-              className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 text-white hover:bg-black/70 transition"
+              className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white transition hover:bg-black/70"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +80,7 @@ export default function ImageCarousel({
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
-                className="w-5 h-5"
+                className="h-5 w-5"
               >
                 <path
                   strokeLinecap="round"
@@ -77,22 +91,26 @@ export default function ImageCarousel({
             </button>
 
             {/* Counter */}
-            <div className="absolute bottom-3 right-3 px-2 py-1 rounded-md bg-black/50 text-white text-xs">
+            <div className="absolute bottom-3 right-3 rounded-md bg-black/50 px-2 py-1 text-xs text-white">
               {current + 1} / {images.length}
             </div>
           </>
         )}
       </div>
 
+      {/* Dots */}
       {images.length > 1 && (
-        <div className="flex justify-center gap-2 mt-3">
-          {images.map((_, i) => (
+        <div className="mt-3 flex justify-center gap-2">
+          {images.map((_, index) => (
             <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              aria-label={`Go to screenshot ${i + 1}`}
-              className={`w-2.5 h-2.5 rounded-full transition ${
-                i === current ? "bg-gray-800" : "bg-gray-300"
+              key={index}
+              type="button"
+              onClick={() => setCurrent(index)}
+              aria-label={`Go to screenshot ${index + 1}`}
+              className={`h-2.5 w-2.5 rounded-full transition ${
+                index === current
+                  ? "bg-gray-800"
+                  : "bg-gray-300"
               }`}
             />
           ))}
