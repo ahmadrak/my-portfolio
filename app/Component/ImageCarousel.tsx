@@ -28,7 +28,7 @@ export default function ImageCarousel({
       prev === images.length - 1 ? 0 : prev + 1
     );
   };
-
+//test
   return (
     <div className="mt-8">
       <h2 className="mb-4 text-xl font-semibold">
