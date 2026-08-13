@@ -6,7 +6,6 @@ interface ImageCarouselProps {
   images: string[];
   alt: string;
 }
-
 export default function ImageCarousel({
   images,
   alt,
