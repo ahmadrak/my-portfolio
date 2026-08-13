@@ -47,8 +47,7 @@ export const projects: Project[] = [
     tech: ["Tailwind", "ReactJS", "expressJS"],
     image: [
       "/images/reddit1.png",
-      "/images/reddit2.png",
-      "/images/reddit3.png"
+      "/images/reddit2.png"
     ],
     githubUrl: "https://github.com/ahmadrak/reddit_clone",
   },
