@@ -85,6 +85,10 @@ export const projects: Project[] = [
   "https://www.youtube.com/embed/RdzQ8IAAN_0",
   "https://youtube.com/shorts/7I9YR1zhAdY?feature=share"
 ],
+
+image: ["/images/dashboard1.png",
+      "/images/dashboard2.png",],
+
     liveUrl: "",
     githubUrl: "https://github.com/ahmadrak/securityERP",
   },
