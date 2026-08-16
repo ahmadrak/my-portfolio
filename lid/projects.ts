@@ -83,7 +83,7 @@ export const projects: Project[] = [
     tech: ["NestJS", "Next.js", "Prisma", "PostgreSQL", "Expo", "React Native"],
     video: [
   "https://www.youtube.com/embed/RdzQ8IAAN_0",
-  "https://youtube.com/shorts/7I9YR1zhAdY?feature=share"
+  "/video/mobileapp.png"
 ],
 
 image: ["/images/dashboard1.png",
