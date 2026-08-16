@@ -87,7 +87,7 @@ export const projects: Project[] = [
 
 image: ["/images/dashboard1.png",
          "/images/dashboard2.png",
-         "/video/mobileapp.png",
+         "/video/mobileapp.mp4",
          ],
 
     liveUrl: "",
