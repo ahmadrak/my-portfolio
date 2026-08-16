@@ -61,7 +61,7 @@ export default async function Page({
       {project.image && project.image.length > 0 && (
         <ImageCarousel images={project.image} alt={project.title} />
       )}
-      {project.video && project.video.map(video => <iframe width="420" height="345" src="`${video}`">
+      {project.video && project.video.map((video,index) => <iframe key={index} width="420" height="345" src={video}>
 </iframe>)}
 
       <GoBackButton />
