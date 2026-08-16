@@ -6,6 +6,7 @@ export type Project = {
   description: string;
   tech: string[];
   image?: string[];
+  video?:string[];
   liveUrl?: string;
   githubUrl?: string;
 };
@@ -80,7 +81,7 @@ export const projects: Project[] = [
     description:
       "A full-stack ERP system for security companies, covering guard attendance, employee records, location/contract management, and role-based admin control. Includes a NestJS + PostgreSQL backend secured with JWT auth guards, a Next.js admin dashboard, and a companion Expo mobile app for guards to check in/out and for admins to manage employees and locations on the go. Built independently while working at a security company, with a focus on production-grade security (IDOR fixes, hashed credentials, protected routes) and real-world operational needs.",
     tech: ["NestJS", "Next.js", "Prisma", "PostgreSQL", "Expo", "React Native"],
-    image: [
+    video: [
       "https://www.youtube.com/watch?v=RdzQ8IAAN_0",
       "https://youtube.com/shorts/LeTe2tBtsSA?feature=share"
     ],
