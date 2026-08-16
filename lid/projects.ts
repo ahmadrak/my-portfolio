@@ -83,11 +83,12 @@ export const projects: Project[] = [
     tech: ["NestJS", "Next.js", "Prisma", "PostgreSQL", "Expo", "React Native"],
     video: [
   "https://www.youtube.com/embed/RdzQ8IAAN_0",
-  "/video/mobileapp.png"
 ],
 
 image: ["/images/dashboard1.png",
-      "/images/dashboard2.png",],
+         "/images/dashboard2.png",
+         "/video/mobileapp.png",
+         ],
 
     liveUrl: "",
     githubUrl: "https://github.com/ahmadrak/securityERP",
