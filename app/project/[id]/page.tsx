@@ -58,11 +58,18 @@ export default async function Page({
         )}
       </div>
 
-      {project.image && project.image.length > 0 && (
-        <ImageCarousel images={project.image} alt={project.title} />
-      )}
-      {project.video && project.video.map((video,index) => <iframe key={index} width="420" height="345" src={video}>
-</iframe>)}
+      {project.video &&
+           project.video.map((video, index) => (
+               <iframe
+                       key={index}
+                       width="420"
+                       height="345"
+                       src={video}
+                       title={`Project video ${index + 1}`}
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                       allowFullScreen
+                     />
+      ))}
 
       <GoBackButton />
     </div>
